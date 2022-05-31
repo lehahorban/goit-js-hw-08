@@ -22,7 +22,9 @@ renderItem(galleryItems)
 
 galleryList.addEventListener("click", showModal)
 
+ const lightbox = new SimpleLightbox('.gallery a', { captionsData: "alt", captionDelay: 250 });
+
 function showModal(e) { 
     e.preventDefault()
-    const lightbox = new SimpleLightbox('.gallery a', { captionsData: "alt", captionDelay: 250 });
+   lightbox
 }
