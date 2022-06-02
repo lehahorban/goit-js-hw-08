@@ -15,7 +15,7 @@ const markup = galleryArray.map(({preview, original, description }) =>
 </a>
    </li>`)
     .join("")
-console.log(markup);
+// console.log(markup);
 galleryList.insertAdjacentHTML("afterbegin", markup)
 }
 renderItem(galleryItems)
@@ -28,3 +28,5 @@ function showModal(e) {
     e.preventDefault()
    lightbox
 }
+
+console.log("dfdfdfd");
