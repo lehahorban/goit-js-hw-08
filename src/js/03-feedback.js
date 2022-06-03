@@ -11,7 +11,7 @@ const STORAGE_KEY = "feedback-form-state"
 const formData = {}
 
 form.addEventListener("submit", onFormSubmit)
-textarea.addEventListener("input", throttle(textAreaInput, 500))
+form.addEventListener("input", throttle(textAreaInput, 500))
 form.addEventListener("input", outputForm)
 populateTextArea()
 
@@ -39,12 +39,13 @@ function textAreaInput(evt) {
 function populateTextArea() {
    try {
         const savedMessage = JSON.parse(localStorage.getItem(STORAGE_KEY)) || ""
-    if (savedMessage) {
-       
-        const getMessage = savedMessage.message
+       if (savedMessage) {
+        
         const getEmail = savedMessage.email
-        textarea.value = getMessage
+        const getMessage = savedMessage.message        
         input.value = getEmail
+        textarea.value = getMessage
+        
     }
    } catch (error) {
        console.log('error');
