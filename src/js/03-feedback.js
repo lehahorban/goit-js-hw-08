@@ -52,3 +52,4 @@ function populateTextArea() {
    }
 }
 
+console.log();
