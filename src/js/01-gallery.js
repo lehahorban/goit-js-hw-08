@@ -29,4 +29,3 @@ function showModal(e) {
    lightbox
 }
 
-console.log("dfdfdfd");
